@@ -152,11 +152,12 @@ const collectDurationPromise = (name: string, func: (...args: any) => Promise<an
       end()
       return res
     } catch (err) {
-      console.error('Error in timed startup function: ' + name, err)
+      console.error('Error in timed startup function:', name, err)
       throw err
     }
   }
 }
+
 
 /* Sets view engine to hbs */
 app.set('view engine', 'hbs')
